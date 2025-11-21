@@ -32,7 +32,7 @@ jobs:
       - name: Build Vue
         run: |
           cd client
-          npm ci              # 干净安装，比 npm install 更快
+          npm install              # 干净安装，比 npm install 更快
           npm run build
 
       - name: Move dist → static
