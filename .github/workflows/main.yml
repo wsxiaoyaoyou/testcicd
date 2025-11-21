@@ -2,7 +2,7 @@ name: Win-mini-CICD
 
 on:
   push:
-    branches: [front+back]          # 每次推 main 分支就触发
+    branches: [main]          # 每次推 main 分支就触发
 
 jobs:
   test-and-deploy:
