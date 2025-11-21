@@ -29,17 +29,17 @@ jobs:
         with:
           node-version: 18
 
-#      - name: Build Vue
-#        run: |
-#          cd client
-#          npm ci              # 干净安装，比 npm install 更快
-#          npm run build
-#
-#      - name: Move dist → static
-#        # Windows 语法：先删旧 static，再把 dist 改名
-#        run: |
-#          Remove-Item -Recurse -Force static
-#          Move-Item client/dist static
+      - name: Build Vue
+        run: |
+          cd client
+          npm ci              # 干净安装，比 npm install 更快
+          npm run build
+
+      - name: Move dist → static
+        # Windows 语法：先删旧 static，再把 dist 改名
+        run: |
+          Remove-Item -Recurse -Force static
+          Move-Item client/dist static
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
