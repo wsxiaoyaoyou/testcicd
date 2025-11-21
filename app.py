@@ -5,7 +5,7 @@ app = Flask(__name__, static_folder='static', static_url_path='/')
 # ---------- API ----------
 @app.route("/api/ping")
 def ping():
-    return jsonify(ping="pong")
+    return jsonify(ping="hello")
 
 # ---------- 前端 ----------
 @app.route("/")
